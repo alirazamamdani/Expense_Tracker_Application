@@ -3,10 +3,6 @@ import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
-
-  // const expenseDate = new Date(2021 ,3 ,28);
-  // const expenseTitle = "Car Expense";
-  // const expenseAmount = 294.67;
   return (
     <Card className="expense-item">
     <ExpenseDate date={props.date}/>
