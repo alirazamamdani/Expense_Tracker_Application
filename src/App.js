@@ -1,6 +1,6 @@
-import React , {useState} from 'react'
-import Expense from './Component/Expenses/Expense'
-import NewExpense from './Component/NewExpense/NewExpense';
+import React, { useState } from "react";
+import Expense from "./Component/Expenses/Expense";
+import NewExpense from "./Component/NewExpense/NewExpense";
 const expenses = [
   {
     id: "e1",
@@ -8,11 +8,11 @@ const expenses = [
     amount: 94.12,
     date: new Date(2020, 7, 14),
   },
-  { 
-    id: "e2", 
-    title: "New TV", 
-    amount: 799.49, 
-    date: new Date(2021, 2, 12) 
+  {
+    id: "e2",
+    title: "New TV",
+    amount: 799.49,
+    date: new Date(2021, 2, 12),
   },
   {
     id: "e3",
@@ -28,18 +28,18 @@ const expenses = [
   },
 ];
 const App = () => {
-  const [expenseData , setExpenseData] = useState(expenses)
+  const [expenseData, setExpenseData] = useState(expenses);
 
-  const AddExpense = expense => {
+  const AddExpense = (expense) => {
     setExpenseData((prevExpense) => {
-      return [expense , ...prevExpense]
+      return [expense, ...prevExpense];
     });
   };
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense onAddExpense={AddExpense}/>
-      <Expense items={expenseData}/>
+      <NewExpense onAddExpense={AddExpense} />
+      <Expense items={expenseData} />
     </div>
   );
 };
