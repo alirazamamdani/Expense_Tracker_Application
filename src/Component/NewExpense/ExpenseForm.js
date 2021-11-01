@@ -35,6 +35,10 @@ const ExpenseForm = (props) => {
     //   date: e.target.value,
     // });
   };
+  const showForm = (e) => {
+    e.preventDefault();
+    
+  }
   const submitHandler = (e) => {
     e.preventDefault();
 
@@ -76,9 +80,13 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="submit" onClick={showForm}>
+          Cancel
+        </button>
         <button type="submit" onClick={submitHandler}>
           Add Expense
         </button>
+        
       </div>
     </form>
   );
